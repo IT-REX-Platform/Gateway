@@ -38,7 +38,7 @@ pipeline {
                     echo 'Pushing dev to main'
                     sh 'git push git@github.com:IT-REX-Platform/Gateway.git dev:main'
                 }
-            }
+            } 
         }
     }
 }
