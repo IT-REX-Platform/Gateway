@@ -1,6 +1,13 @@
-pipeline {
-    agent any
+def agentLabel
+if (BRANCH_NAME == 'main') {
+    agentLabel = 'master'
+} else {
+    agentLabel = ''
+}
 
+pipeline {
+    agent { label agentLabel }
+    
     stages {
         stage('Pre-build') {
             steps {
