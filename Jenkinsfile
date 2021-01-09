@@ -34,8 +34,8 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'rm -rf /srv/Backend/gateway/*'
-                sh 'cd ./build && mv jib-image.tar /srv/Backend/gateway/gateway.tar'
-                sh 'touch /srv/Backend/gateway/deploy'
+                sh 'cd ./build && mv jib-image.tar /srv/Backend/cd/gateway/gateway.tar'
+                sh 'touch /srv/Backend/cd/gateway/deploy'
             }
         }
         stage('Release') {
