@@ -7,7 +7,7 @@ if (BRANCH_NAME == 'main') {
 
 pipeline {
     agent { label agentLabel }
-    
+
     stages {
         stage('Pre-build') {
             steps {
@@ -25,6 +25,19 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+            }
+        }
+        stage('Sonarqube') {
+            environment {
+                scannerHome = tool 'SonarQubeScanner'
+            }
+            steps {
+                withSonarQubeEnv('sonarqube') {
+                    sh './gradlew sonarqube'
+                }
+                timeout(time: 10, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
             }
         }
         stage('Deploy') {
