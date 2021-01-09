@@ -36,7 +36,8 @@ pipeline {
                     sh './gradlew sonarqube'
                 }
                 timeout(time: 10, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
+                    // Needs to be changed to true in the real project
+                    waitForQualityGate abortPipeline: false
                 }
             }
         }
