@@ -13,7 +13,6 @@ pipeline {
             steps {
                 echo "NODE_NAME = ${env.NODE_NAME}"
                 echo 'Pre-build..'
-                sh './gradlew npmInstall'
             }
         }
         stage('Build') {
