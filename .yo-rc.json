@@ -38,5 +38,5 @@
     "otherModules": [],
     "blueprints": []
   },
-  "entities": ["Person", "Course", "Participation"]
+  "entities": ["Person", "Course", "Participation", "Media", "Video"]
 }
