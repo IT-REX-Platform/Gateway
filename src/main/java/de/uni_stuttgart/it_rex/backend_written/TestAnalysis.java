@@ -2,8 +2,12 @@ package de.uni_stuttgart.it_rex.backend_written;
 
 public class TestAnalysis {
 
+  private TestAnalysis() {
+  }
+
   /**
    * Adds two integers.
+   *
    * @param a first
    * @param b second
    * @return sum
