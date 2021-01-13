@@ -1,9 +1,14 @@
 package de.uni_stuttgart.it_rex.backend_written;
 
 public class TestAnalysis {
-  public void unusedMethod(int testInt) {
-    while (true) {
-      System.out.println(testInt + "I am running forever!");
-    }
+
+  /**
+   * Adds two integers.
+   * @param a first
+   * @param b second
+   * @return sum
+   */
+  public int add(final int a, final int b) {
+    return a + b;
   }
 }
