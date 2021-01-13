@@ -8,7 +8,7 @@ public class TestAnalysis {
    * @param b second
    * @return sum
    */
-  public int add(final int a, final int b) {
+  public static int add(final int a, final int b) {
     return a + b;
   }
 }
