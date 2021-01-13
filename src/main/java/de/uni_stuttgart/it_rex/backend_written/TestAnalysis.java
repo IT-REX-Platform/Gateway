@@ -1,4 +1,4 @@
-package com.vbk.gateway_written;
+package de.uni_stuttgart.it_rex.backend_written;
 
 public class TestAnalysis {
   public void unusedMethod(int testInt) {
