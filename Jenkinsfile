@@ -9,50 +9,67 @@ pipeline {
     agent { label agentLabel }
 
     stages {
-        stage('Pre-build') {
+        stage('check java') {
             steps {
-                echo "NODE_NAME = ${env.NODE_NAME}"
-                echo 'Pre-build..'
-                sh './gradlew npmInstall'
+                sh 'java -version'
             }
         }
-        stage('Build') {
-            steps {
-                echo 'Building Gateway..'
-                sh './gradlew -Pprod bootJar jibBuildTar'
+
+        stage('clean') {
+            steps { sh 'chmod +x gradlew'
+                sh './gradlew clean --no-daemon'
             }
         }
-        stage('Test') {
+
+        stage('nohttp') {
             steps {
-                echo 'Testing..'
+                sh './gradlew checkstyleNohttp --no-daemon'
             }
         }
-        stage('Sonarqube') {
+
+        stage('backend tests') {
+            steps {
+                sh './gradlew check jacocoTestReport -PnodeInstall --no-daemon'
+                junit '**/build/**/TEST-*.xml'
+            }
+        }
+
+        stage('packaging') {
+            steps {
+                sh './gradlew bootJar -x test -Pprod -PnodeInstall --no-daemon'
+                archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
+            }
+        }
+
+        stage('quality analysis') {
             environment {
                 scannerHome = tool 'SonarQubeScanner'
             }
             steps {
                 withSonarQubeEnv('sonarqube') {
-                    sh './gradlew sonarqube'
+                    sh './gradlew sonarqube --no-daemon'
                 }
                 timeout(time: 10, unit: 'MINUTES') {
-                    // Needs to be changed to true in the real project
+                    // Needs to be changed to true in the real project.
                     waitForQualityGate abortPipeline: false
                 }
             }
         }
-        stage('Deploy') {
+
+        stage('deploy') {
             when {
                 branch 'main'
             }
             steps {
                 echo 'Deploying....'
+                sh './gradlew jibBuildTar'
                 sh 'rm -rf /srv/Backend/gateway/*'
                 sh 'cd ./build && mv jib-image.tar /srv/Backend/gateway/gateway.tar'
                 sh 'touch /srv/Backend/gateway/deploy'
             }
         }
-        stage('Release') {
+
+        stage('release') {
             when { allOf { branch 'dev'; triggeredBy 'UserIdCause' } }
             steps {
                 sshagent (credentials: ['jenkins']) {

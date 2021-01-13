@@ -104,7 +104,7 @@ management:
 
 spring:
   application:
-    name: gateway
+    name: Gateway
   jmx:
     enabled: false
   data:
@@ -126,6 +126,10 @@ spring:
       hibernate.order_updates: true
       hibernate.query.fail_on_pagination_over_collection_fetch: true
       hibernate.query.in_clause_parameter_padding: true
+      hibernate.cache.region.factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
+      hibernate.cache.use_minimal_puts: true
+      hibernate.cache.hazelcast.instance_name: Gateway
+      hibernate.cache.hazelcast.use_lite_member: true
     hibernate:
       ddl-auto: none
       naming:
@@ -191,11 +195,11 @@ jhipster:
   #     allow-credentials: true
   #     max-age: 1800
   mail:
-    from: gateway@localhost
+    from: Gateway@localhost
   swagger:
     default-include-pattern: /api/.*
-    title: gateway API
-    description: gateway API documentation
+    title: Gateway API
+    description: Gateway API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:
