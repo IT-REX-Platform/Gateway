@@ -2,18 +2,12 @@ package de.uni_stuttgart.it_rex.backend_written;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class TestAnalysisTest {
 
   private TestAnalysisTest() {
-  }
-
-  @Test
-  void createTestAnalysis() {
-    assertNotNull(new TestAnalysis());
   }
 
   @Test
