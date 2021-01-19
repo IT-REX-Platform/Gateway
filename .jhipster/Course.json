@@ -20,7 +20,7 @@
     {
       "fieldName": "courseDescription",
       "fieldType": "byte[]",
-      "fieldTypeBlobContent": "any"
+      "fieldTypeBlobContent": "text"
     }
   ],
   "relationships": [
@@ -41,6 +41,9 @@
   "readOnly": false,
   "embedded": false,
   "clientRootFolder": "",
-  "applications": ["Gateway", "CourseService"],
+  "applications": [
+    "Gateway",
+    "CourseService"
+  ],
   "microserviceName": "CourseService"
 }
