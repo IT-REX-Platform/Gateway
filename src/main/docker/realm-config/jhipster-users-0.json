@@ -75,6 +75,81 @@
       },
       "notBefore": 0,
       "groups": ["/Users"]
+    },
+    {
+      "id": "8ffdfa00-d07c-4c3f-baca-d744f4ad81d9",
+      "createdTimestamp": 1612027427476,
+      "username": "itrexadmin",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "credentials": [
+        {
+          "id": "01851ad2-e87d-4bfe-b206-7a30a8bd4e8f",
+          "type": "password",
+          "createdDate": 1612027438241,
+          "secretData": "{\"value\":\"PNeIf1xRJpcTv8jKI0z66set+eDeuEcPF83iHJdcpkw2GxhhB9P8Yegzs49SAmNJPb3YW2F2HJIZ/pk5qE3dqg==\",\"salt\":\"BJ81gLSPu/nIdgUhI4TvBw==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+        "account": ["view-profile", "manage-account"]
+      },
+      "notBefore": 0,
+      "groups": ["/ITREX_Admins"]
+    },
+    {
+      "id": "dcf3050b-cef8-4e09-b640-1b8e878531b6",
+      "createdTimestamp": 1612027382677,
+      "username": "lecturer",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "credentials": [
+        {
+          "id": "34c3386d-529f-4764-9bc9-2f212a0d7542",
+          "type": "password",
+          "createdDate": 1612027402184,
+          "secretData": "{\"value\":\"raROgxI9ofLVf0jpLa/3i3MpAFW67SWcA9rYIH+NAd51Y6o7rmsfszTsoMV7JKSCYa0TPIz91wNq7MHZAsXoVg==\",\"salt\":\"avEcPZRCLI2ngOCN5PIz8Q==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+        "account": ["view-profile", "manage-account"]
+      },
+      "notBefore": 0,
+      "groups": ["/ITREX_Lecturers"]
+    },
+    {
+      "id": "6684d145-f558-4701-8bfd-ec823237a1c1",
+      "createdTimestamp": 1612027458635,
+      "username": "student",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "credentials": [
+        {
+          "id": "d348ab62-54cb-4399-8163-767768394003",
+          "type": "password",
+          "createdDate": 1612027466615,
+          "secretData": "{\"value\":\"CcLsDPOORnVq/4pUAtbwMEDSGLhP2e31lNTHxvWo4LgdH0H4vT13pm29MFTtvKR+Qgro2Yvd32Dvd5CS26n30g==\",\"salt\":\"E9BECrImvtvM+P2rLPBEag==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+        "account": ["view-profile", "manage-account"]
+      },
+      "notBefore": 0,
+      "groups": ["/ITREX_Students"]
     }
   ]
 }

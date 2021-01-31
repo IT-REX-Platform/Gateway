@@ -75,6 +75,30 @@
         "clientRole": false,
         "containerId": "jhipster",
         "attributes": {}
+      },
+      {
+        "id": "7ae89ccf-5c60-457e-871d-695ade2bf5ff",
+        "name": "ITREX_STUDENT",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "jhipster",
+        "attributes": {}
+      },
+      {
+        "id": "b86fc0af-bb83-4484-bf65-f35a197ac6f4",
+        "name": "ITREX_ADMIN",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "jhipster",
+        "attributes": {}
+      },
+      {
+        "id": "cf82ab92-ea4a-42a2-99e2-00245dcacfbf",
+        "name": "ITREX_LECTURER",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "jhipster",
+        "attributes": {}
       }
     ],
     "client": {
@@ -395,6 +419,33 @@
       "path": "/Users",
       "attributes": {},
       "realmRoles": ["ROLE_USER"],
+      "clientRoles": {},
+      "subGroups": []
+    },
+    {
+      "id": "29b27010-95ce-42c5-a337-d655899eb50b",
+      "name": "ITREX_Admins",
+      "path": "/ITREX_Admins",
+      "attributes": {},
+      "realmRoles": ["ITREX_ADMIN"],
+      "clientRoles": {},
+      "subGroups": []
+    },
+    {
+      "id": "a649173e-0a58-4bd4-a3fc-8db2984a05df",
+      "name": "ITREX_Lecturers",
+      "path": "/ITREX_Lecturers",
+      "attributes": {},
+      "realmRoles": ["ITREX_LECTURER"],
+      "clientRoles": {},
+      "subGroups": []
+    },
+    {
+      "id": "194b4dc0-be78-4160-849b-52e4858ebc83",
+      "name": "ITREX_Students",
+      "path": "/ITREX_Students",
+      "attributes": {},
+      "realmRoles": ["ITREX_STUDENT"],
       "clientRoles": {},
       "subGroups": []
     }
@@ -852,7 +903,14 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "web_app",
-      "redirectUris": ["http://localhost:*", "https://localhost:*", "http://127.0.0.1:*", "https://127.0.0.1:*", "dev.localhost.ionic:*", "it-rex://*"],
+      "redirectUris": [
+        "http://localhost:*",
+        "https://localhost:*",
+        "http://127.0.0.1:*",
+        "https://127.0.0.1:*",
+        "dev.localhost.ionic:*",
+        "it-rex://*"
+      ],
       "webOrigins": ["*"],
       "notBefore": 0,
       "bearerOnly": false,
