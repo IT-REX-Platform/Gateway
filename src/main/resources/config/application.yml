@@ -165,6 +165,10 @@ spring:
           oidc:
             client-id: web_app
             client-secret: web_app
+  servlet:
+    multipart:
+      max-file-size: 7GB
+      max-request-size: 7GB
 
 server:
   servlet:
