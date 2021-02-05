@@ -21,6 +21,11 @@
       "fieldName": "courseDescription",
       "fieldType": "byte[]",
       "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "publishState",
+      "fieldType": "PUBLISHSTATE",
+      "fieldValues": "UNPUBLISHED,PUBLISHED"
     }
   ],
   "relationships": [
