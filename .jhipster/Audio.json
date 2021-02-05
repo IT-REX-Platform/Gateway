@@ -1,31 +1,31 @@
 {
-  "name": "Media",
+  "name": "Audio",
   "fields": [
     {
       "fieldName": "title",
       "fieldType": "String"
     },
     {
-      "fieldName": "uploadDate",
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endDate",
       "fieldType": "LocalDate"
     },
     {
       "fieldName": "mimeType",
       "fieldType": "MIMETYPE",
-      "fieldValues": "VIDEO,IMAGE,AUDIO"
+      "fieldValues": "AUDIO_MPEG (audio/mpeg),IMAGE_GIF (image/gif),IMAGE_JPEG (image/jpeg),IMAGE_PNG (image/png),IMAGE_SVG (image/svg),VIDEO_MP4 (video/mp4)"
     },
     {
-      "fieldName": "format",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "location",
-      "fieldType": "String"
+      "fieldName": "length",
+      "fieldType": "Integer"
     }
   ],
   "relationships": [],
-  "changelogDate": "20210119081557",
-  "entityTableName": "media",
+  "changelogDate": "20210205135545",
+  "entityTableName": "audio",
   "dto": "mapstruct",
   "pagination": "no",
   "service": "serviceClass",
