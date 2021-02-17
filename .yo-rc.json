@@ -14,17 +14,13 @@
     "enableSwaggerCodegen": true,
     "enableTranslation": true,
     "jhiPrefix": "jhi",
-    "languages": [
-      "de"
-    ],
+    "languages": ["de"],
     "messageBroker": false,
     "nativeLanguage": "en",
     "prodDatabaseType": "postgresql",
     "searchEngine": false,
     "skipClient": true,
-    "testFrameworks": [
-      "cucumber"
-    ],
+    "testFrameworks": ["cucumber"],
     "websocket": false,
     "applicationType": "gateway",
     "packageName": "de.uni_stuttgart.it_rex.backend",
@@ -42,11 +38,5 @@
     "otherModules": [],
     "blueprints": []
   },
-  "entities": [
-    "Course",
-    "Participation",
-    "Audio",
-    "Image",
-    "Video"
-  ]
+  "entities": ["Course", "Participation", "Audio", "Image", "Video", "Document"]
 }

@@ -2,6 +2,10 @@
   "name": "Course",
   "fields": [
     {
+      "fieldName": "uuid",
+      "fieldType": "UUID"
+    },
+    {
       "fieldName": "name",
       "fieldType": "String"
     },
@@ -46,9 +50,6 @@
   "readOnly": false,
   "embedded": false,
   "clientRootFolder": "",
-  "applications": [
-    "Gateway",
-    "CourseService"
-  ],
+  "applications": ["Gateway", "CourseService"],
   "microserviceName": "CourseService"
 }

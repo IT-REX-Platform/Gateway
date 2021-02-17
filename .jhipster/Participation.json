@@ -2,6 +2,10 @@
   "name": "Participation",
   "fields": [
     {
+      "fieldName": "uuid",
+      "fieldType": "UUID"
+    },
+    {
       "fieldName": "type",
       "fieldType": "PARTICIPATIONTYPE",
       "fieldValues": "STUDENT,LECTURER,HIWI"
@@ -33,9 +37,6 @@
   "readOnly": false,
   "embedded": false,
   "clientRootFolder": "",
-  "applications": [
-    "Gateway",
-    "CourseService"
-  ],
+  "applications": ["Gateway", "CourseService"],
   "microserviceName": "CourseService"
 }
