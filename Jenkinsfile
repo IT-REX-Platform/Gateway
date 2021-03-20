@@ -1,4 +1,4 @@
-ahdef agentLabel
+def agentLabel
 if (BRANCH_NAME == 'main') {
     agentLabel = 'master'
 } else {
