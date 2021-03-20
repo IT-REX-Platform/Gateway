@@ -65,10 +65,10 @@ pipeline {
             }
             steps {
                 echo 'Deploying....'
-                sh './gradlew jibBuildTar'
-                sh 'rm -rf /srv/Backend/gateway/*'
-                sh 'cd ./build && mv jib-image.tar /srv/Backend/gateway/gateway.tar'
-                sh 'touch /srv/Backend/gateway/deploy'
+                dir('docker') {
+                    sh 'docker-compose down'
+                    sh 'docker-compose up -d --build'
+                }
             }
         }
 
