@@ -22,6 +22,7 @@ services:
       - default
 
   gateway-postgresql:
+    restart: always
     image: "postgres:12.3"
     environment:
       - POSTGRES_USER=Gateway
