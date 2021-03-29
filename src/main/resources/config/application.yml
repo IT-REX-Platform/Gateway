@@ -173,6 +173,7 @@ spring:
       max-request-size: -1
 
 server:
+  max-http-header-size: 48000
   servlet:
     session:
       cookie:
